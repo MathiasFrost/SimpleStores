@@ -9,10 +9,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": [
-      "dom",
-      "esnext"
+      "DOM",
+      "ESNext"
     ],
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "noEmit": true,
     "noImplicitAny": true,

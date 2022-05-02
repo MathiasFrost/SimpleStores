@@ -4,10 +4,9 @@
   "description": "Minimal framework-independent stores",
   "author": "Mathias Amandus Andvik Løken",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.modern.js",
-  "source": "src/index.ts",
-  "Repository": "https://github.com/",
+  "module": "dist/index.js",
+  "Repository": "https://github.com/MathiasFrost/SimpleStores",
+  "type": "module",
   "engines": {
     "node": ">=10"
   },
@@ -15,8 +14,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
-    "start": "tsc --watch"
+    "build": "tsc --build --listEmittedFiles -v",
+    "start": "tsc --build --listEmittedFiles -v --watch"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",

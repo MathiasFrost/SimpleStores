@@ -7,14 +7,12 @@
     "forceConsistentCasingInFileNames": true,
     "importsNotUsedAsValues": "error",
     "isolatedModules": true,
-    "jsx": "preserve",
     "lib": [
-      "dom",
-      "esnext"
+      "DOM",
+      "ESNext"
     ],
     "module": "ESNext",
     "moduleResolution": "node",
-    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitOverride": true,
