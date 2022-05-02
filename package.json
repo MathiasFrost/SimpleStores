@@ -1,0 +1,31 @@
+{
+  "name": "simplestores",
+  "version": "1.0.0",
+  "description": "Minimal framework-independent stores",
+  "author": "Mathias Amandus Andvik Løken",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.ts",
+  "Repository": "https://github.com/",
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^2.1.3",
+    "typescript": "^4.6.4"
+  }
+}
