@@ -1,4 +1,4 @@
-# Simple Stores
+# [Simple Stores](https://www.npmjs.com/package/@mathias_frost/simplestores)
 
 Minimal framework-independent stores
 
