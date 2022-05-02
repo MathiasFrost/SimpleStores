@@ -39,11 +39,7 @@ export class Store<T> implements IStore<T> {
 
   /** @inheritDoc */
   set value(value: T) {
-    this._value = value;
-    const val = this.value;
-    for (const event of this.events) {
-      event(val);
-    }
+    this.set(value);
   }
 
   /** @inheritDoc */
@@ -56,6 +52,15 @@ export class Store<T> implements IStore<T> {
   /** @inheritDoc */
   unsubscribe(event: Subscribe<T> | null) {
     this.events = this.events.filter(e => e !== event);
+  }
+
+  /** Because super.value = value doesn't work... */
+  protected set(value: T) {
+    this._value = value;
+    const val = this.value;
+    for (const event of this.events) {
+      event(val);
+    }
   }
 }
 
@@ -77,26 +82,22 @@ abstract class StorageStore<T> extends Store<T> {
 
   /** Get stored value, and if it does not exist, store and return initial value */
   override get value(): T {
-    let string = '';
     const store = this.getStore();
     if (store) {
-      const value = store.getItem(this.key);
+      const string = store.getItem(this.key);
 
-      // If there is no value stored, set and return initial value
-      if (!value) {
+      // If there is no string stored, set and return initial value
+      if (!string) {
         this.value = this.initialValue;
         return this.initialValue;
       }
 
-      string = value;
+      return JSON.parse(string);
     }
 
-    if (!string) {
-      this.value = this.initialValue;
-      return this.initialValue;
-    }
-
-    return JSON.parse(string);
+    // Return initial value if window is unavailable
+    this.value = this.initialValue;
+    return this.initialValue;
   }
 
   /** @inheritDoc */
@@ -107,7 +108,7 @@ abstract class StorageStore<T> extends Store<T> {
       store.setItem(this.key, string);
     }
 
-    super.value = value;
+    this.set(value);
   }
 
   /** Try to get storage from window */

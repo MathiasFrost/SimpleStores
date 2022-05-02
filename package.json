@@ -4,9 +4,17 @@
   "description": "Minimal framework-independent stores",
   "author": "Mathias Amandus Andvik Løken",
   "license": "MIT",
-  "module": "dist/index.js",
-  "Repository": "https://github.com/MathiasFrost/SimpleStores",
   "type": "module",
+  "source": "src/index.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "Repository": "https://github.com/MathiasFrost/SimpleStores",
   "engines": {
     "node": ">=10"
   },
@@ -14,13 +22,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc --build --listEmittedFiles -v",
-    "start": "tsc --build --listEmittedFiles -v --watch"
+    "build": "microbundle --compress false",
+    "start": "microbundle --compress false watch"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
+    "microbundle": "^0.15.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
