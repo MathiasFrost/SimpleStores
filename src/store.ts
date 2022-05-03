@@ -64,7 +64,8 @@ export class Store<T> implements IStore<T> {
   }
 }
 
-/** Store for session or local storage */
+/** Store for session or local storage.<br/>
+ * Initial value is stored first when either subscribing, setting or getting value, not when constructing. */
 abstract class StorageStore<T> extends Store<T> {
 
   /** Store initial value to replace possible null values from store */

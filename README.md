@@ -7,7 +7,7 @@ Minimal framework-independent stores
 ### Creating a store
 
 ```ts
-import {LocalStore, SessionStore, Store} from 'simplestores';
+import {LocalStore, SessionStore, Store} from '@mathias_frost/simplestores';
 
 export interface SomeModel {
   someString: string;
@@ -25,7 +25,7 @@ export const localStore = new LocalStore<SomeModel>({someString: 'string', someN
 ```tsx
 import React from 'react';
 import {localStore, sessionStore, store} from './stores';
-import type {Subscribe} from 'simplestores';
+import type {Subscribe} from '@mathias_frost/simplestores';
 
 export class Component extends React.Component<{}, {}> {
 
@@ -62,4 +62,4 @@ import {store} from './stores';
 const value = store.value;
 ```
 
-_This will fetch the actual value stored in either storage when using local or session stores_
+_This will fetch the actual value possibly stored in session or local storage_
