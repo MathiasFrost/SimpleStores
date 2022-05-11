@@ -4,7 +4,7 @@ import {StorageStore} from './storageStore';
 export class SessionStore<T> extends StorageStore<T> {
 
   /** @inheritDoc */
-  protected override getStore(): Storage | undefined {
+  protected getStore(): Storage | undefined {
     return typeof window === 'undefined' ? undefined : window.sessionStorage;
   }
 }

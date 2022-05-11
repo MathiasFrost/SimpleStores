@@ -49,7 +49,5 @@ export abstract class StorageStore<T> extends Store<T> {
   }
 
   /** Try to get storage from window */
-  protected getStore(): Storage | undefined {
-    throw new Error('getStore must be implemented');
-  }
+  protected abstract getStore(): Storage | undefined;
 }
