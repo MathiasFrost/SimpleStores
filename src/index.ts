@@ -1,9 +1,10 @@
-import type {IStore} from './iStore';
-import type {Subscribe} from './subscribe';
-import {Store} from './store';
-import {StorageStore} from './storageStore';
-import {SessionStore} from './sessionStore';
-import {LocalStore} from './localStore';
+import { SimpleHelper } from "./simpleHelper";
+import type { IStore } from "./iStore";
+import { LocalStore } from "./localStore";
+import { SessionStore } from "./sessionStore";
+import { StorageStore } from "./storageStore";
+import { Store } from "./store";
+import type { Subscribe } from "./subscribe";
 
-export {Store, LocalStore, SessionStore, StorageStore};
-export type {IStore, Subscribe};
+export { Store, LocalStore, SessionStore, StorageStore, SimpleHelper };
+export type { IStore, Subscribe };

@@ -1,39 +1,39 @@
 {
-  "name": "@mathias_frost/simplestores",
-  "version": "1.0.2",
-  "description": "Minimal framework-independent stores",
-  "author": "Mathias Amandus Andvik Løken",
-  "license": "MIT",
-  "type": "module",
-  "source": "src/index.ts",
-  "exports": {
-    "require": "./dist/index.cjs",
-    "default": "./dist/index.modern.js"
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.module.js",
-  "unpkg": "./dist/index.umd.js",
-  "types": "dist/index.d.ts",
-  "Repository": "https://github.com/MathiasFrost/SimpleStores",
-  "engines": {
-    "node": ">=10"
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "microbundle --compress false",
-    "start": "microbundle --compress false watch"
-  },
-  "devDependencies": {
-    "@types/node": "^17.0.31",
-    "@types/react": "^18.0.8",
-    "@types/react-dom": "^18.0.3",
-    "microbundle": "^0.15.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^2.1.3",
-    "typescript": "^4.6.4"
-  }
+	"name": "@mathias_frost/simplestores",
+	"version": "1.0.3",
+	"description": "Minimal framework-independent stores",
+	"author": "Mathias Amandus Andvik Løken",
+	"license": "MIT",
+	"type": "module",
+	"source": "src/index.ts",
+	"exports": {
+		"require": "./dist/index.cjs",
+		"default": "./dist/index.modern.js"
+	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.module.js",
+	"unpkg": "./dist/index.umd.js",
+	"types": "dist/index.d.ts",
+	"Repository": "https://github.com/MathiasFrost/SimpleStores",
+	"engines": {
+		"node": ">=10"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "microbundle --compress false",
+		"start": "microbundle --compress false watch"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.31",
+		"@types/react": "^18.0.8",
+		"@types/react-dom": "^18.0.3",
+		"microbundle": "^0.15.0",
+		"react": "^18.1.0",
+		"react-dom": "^18.1.0",
+		"react-router-dom": "^6.3.0",
+		"react-scripts": "^2.1.3",
+		"typescript": "^4.6.4"
+	}
 }

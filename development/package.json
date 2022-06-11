@@ -1,23 +1,21 @@
 {
-  "name": "development",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "node ../node_modules/react-scripts/bin/react-scripts.js start"
-  },
-  "dependencies": {
-    "@types/node": "file:../node_modules/@types/node",
-    "@types/react": "file:../node_modules/@types/react",
-    "@types/react-dom": "file:../node_modules/@types/react-dom",
-    "react": "file:../node_modules/react",
-    "react-dom": "file:../node_modules/react-dom",
-    "react-router-dom": "file:../node_modules/react-router-dom",
-    "react-scripts": "file:../node_modules/react-scripts",
-    "simplestores": "file:.."
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+	"name": "development",
+	"version": "1.0.0",
+	"scripts": {
+		"start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
+		"build": "node ../node_modules/react-scripts/bin/react-scripts.js build"
+	},
+	"dependencies": {
+		"@types/node": "file:../node_modules/@types/node",
+		"@types/react": "file:../node_modules/@types/react",
+		"@types/react-dom": "file:../node_modules/@types/react-dom",
+		"react": "file:../node_modules/react",
+		"react-dom": "file:../node_modules/react-dom",
+		"react-router-dom": "file:../node_modules/react-router-dom",
+		"react-scripts": "file:../node_modules/react-scripts",
+		"simplestores": "file:.."
+	},
+	"browserslist": [
+		">0.2%", "not dead", "not ie <= 11", "not op_mini all"
+	]
 }
