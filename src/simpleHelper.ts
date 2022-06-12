@@ -6,6 +6,10 @@ export class SimpleHelper
 	/** Detect any JSON date strings in JSON string and initialize them with new Date() */
 	static initializeDates(json: any)
 	{
+		if (!json)
+		{
+			return;
+		}
 		const keys = Object.keys(json);
 		for (const key of keys)
 		{
