@@ -1,6 +1,6 @@
 {
 	"name": "@mathias_frost/simplestores",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Minimal framework-independent stores",
 	"author": "Mathias Amandus Andvik Løken",
 	"license": "MIT",
